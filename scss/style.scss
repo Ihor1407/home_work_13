@@ -1,0 +1,86 @@
+.container {
+  margin: 50px;
+  position: relative;
+  display: block;
+}
+
+.square {
+  fill: aqua;
+  animation: squareAnimation 2s linear infinite;
+  stroke-width: 5;
+  stroke: blueviolet;
+}
+
+@keyframes squareAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: translate(150px);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rectangle {
+  fill: red;
+  animation: rectangleAnimation 6s ease infinite;
+  transform-origin: -200px 140px;
+  stroke-width: 5px;
+  stroke: yellow;
+}
+
+@keyframes rectangleAnimation {
+  0% {
+    transform: translate(236px, 144px);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.circle {
+  fill: green;
+  animation: circleAnimation 2s infinite;
+  overflow: visible;
+  stroke: crimson;
+  stroke-width: 5px;
+}
+
+@keyframes circleAnimation {
+  0% {
+    translate: -100px 100px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+.ellipse {
+  fill: pink;
+  stroke: blue;
+  stroke-width: 5px;
+  animation: ellipse 3s infinite;
+  display: block;
+  overflow: visible;
+
+  transform-box: view-box;
+  transition: 0.5 hover;
+
+  &:hover {
+    stroke: green;
+    fill: black;
+  }
+}
+@keyframes ellipse {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
